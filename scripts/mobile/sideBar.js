@@ -13,7 +13,24 @@ $(document).ready(function() {
     });
 
 
+});
 
 
+$(document).ready(function() {
+    $('#menuItem').on('click', function() {
+        const $submenu = $('#submenu');
+        const isHidden = $submenu.hasClass('hidden');
 
+        // Toggle hidden class
+        $submenu.toggleClass('hidden');
+
+        // Animate max-height for smooth transition
+        if (isHidden) {
+            $submenu.css('max-height', '200px'); // Set this to a value that accommodates your content
+            $('#arrow').addClass('rotate-180');
+        } else {
+            $submenu.css('max-height', '0');
+            $('#arrow').removeClass('rotate-180');
+        }
+    });
 });

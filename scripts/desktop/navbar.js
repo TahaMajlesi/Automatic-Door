@@ -19,4 +19,14 @@ $(document).ready(function() {
             $('#productsMenu').addClass('hidden');
         }
     });
+
+    $('#LanguageDropDown').on('click', function() {
+        $('#LanguageMenu').toggleClass('hidden');
+    });
+
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('#LanguageDropDown').length) {
+            $('#LanguageMenu').addClass('hidden');
+        }
+    });
 });
